@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import Beers from '../components/Beers';
+import FavoritedBeers from '../components/FavoritedBeer';
+import Random from '../components/Random';
 
-class App extends Component {
-  render() {
+const App = (props) => {
     return (
       <div className="App">
         <header className="App-header">
@@ -13,10 +17,17 @@ class App extends Component {
           </h1>
           <li>Sign Up</li>
           <li>Log In</li>
+          <Router>
+            <div>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/beers" component={Beers} />
+              <Route exact path="/favorited-beers" component={FavoritedBeers} />
+              <Route exact path="/random" component={Random} />
+            </div>
+          </Router>
         </header>
       </div>
     );
-  }
 }
 
 export default App;
