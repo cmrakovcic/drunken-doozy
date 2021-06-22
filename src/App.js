@@ -1,17 +1,22 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Welcome to the Drunken Doozy!
-        </h1>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>
+            Welcome to the Drunken Doozy!
+          </h1>
+          <li>Sign Up</li>
+          <li>Log In</li>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
