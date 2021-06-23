@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './Home';
+import Login from './components/Login';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
@@ -30,6 +31,7 @@ ReactDOM.render((
       <Route exact path="/beers" component={Beers} />
       <Route exact path="/favorited-beers" component={FavoritedBeers} />
       <Route exact path="/random" component={Random} />
+      <Route exact path="/login" component={Login} />
     </div>
   </Router>),
   document.getElementById('root')
