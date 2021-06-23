@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Home from './Home';
-import Beers from '../components/Beers';
+import NavBar from '../components/NavBar.js';
+import Home from '../components/Home';
+import Beers from '../components/Beers.js';
 import FavoritedBeers from '../components/FavoritedBeer';
 import Random from '../components/Random';
 
@@ -19,6 +20,7 @@ const App = (props) => {
           <li>Log In</li>
           <Router>
             <div>
+              <NavBar />
               <Route exact path="/" component={Home} />
               <Route exact path="/beers" component={Beers} />
               <Route exact path="/favorited-beers" component={FavoritedBeers} />
