@@ -10,6 +10,7 @@ import NavBar from './components/NavBar';
 import Home from './Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Logout from './components/Logout';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
@@ -34,6 +35,7 @@ ReactDOM.render((
       <Route exact path="/random" component={Random} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
+      <Route exact path="/logout" component={Logout} />
     </div>
   </Router>),
   document.getElementById('root')

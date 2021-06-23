@@ -18,6 +18,9 @@ const NavBar = () => {
         <li>
           <NavLink to="/random">Random Beer</NavLink>
         </li>
+        <li>
+          <NavLink to="/logout">Logout</NavLink>
+        </li>
       </ul>
     </div>
   );
