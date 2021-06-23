@@ -10,8 +10,8 @@ const App = (props) => {
           <h1>
             Welcome to the Drunken Doozy!
           </h1>
-          <button>Sign Up</button>
-          <button>Log In</button>
+          <button>Login</button>
+          <button>Signup</button>
         </header>
       </div>
     );
