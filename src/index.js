@@ -25,7 +25,8 @@ ReactDOM.render((
   <Router>
     <div>
       <NavBar />
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={App} />      
+      <Route exact path="/home" component={Home} />
       <Route exact path="/beers" component={Beers} />
       <Route exact path="/favorited-beers" component={FavoritedBeers} />
       <Route exact path="/random" component={Random} />
