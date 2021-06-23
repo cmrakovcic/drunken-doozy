@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './Home';
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
@@ -32,6 +33,7 @@ ReactDOM.render((
       <Route exact path="/favorited-beers" component={FavoritedBeers} />
       <Route exact path="/random" component={Random} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={Signup} />
     </div>
   </Router>),
   document.getElementById('root')
