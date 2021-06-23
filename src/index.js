@@ -5,6 +5,12 @@ import App from './App';
 import manageFavoritedBeer from './reducers/manageFavoritedBeers';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './Home';
+import Beers from './components/Beers';
+import FavoritedBeers from './components/FavoritedBeers';
+import Random from './components/Random';
 
 const store = createStore(manageFavoritedBeer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -15,3 +21,15 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+ReactDOM.render((
+  <Router>
+    <div>
+      <NavBar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/beers" component={Beers} />
+      <Route exact path="/favorited-beers" component={FavoritedBeers} />
+      <Route exact path="/random" component={Random} />
+    </div>
+  </Router>),
+  document.getElementById('root')
+);
