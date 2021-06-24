@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useHistory } from "react-router-dom";
 
@@ -8,18 +7,18 @@ const App = (props) => {
 
   const history = useHistory();
   
-  const handleLogin = () =>{ 
+  const handleLogin = () => { 
     history.push("/login");
   }
 
-  const handleSignup = () =>{ 
+  const handleSignup = () => { 
     history.push("/signup");
   }
 
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+           <img src={"https://pngimg.com/uploads/beer/beer_PNG2330.png"} className="App-logo" alt="logo" />
           <h1>
             Welcome to the Drunken Doozy!
           </h1>
