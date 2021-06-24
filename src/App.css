@@ -8,7 +8,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url("https://t3.ftcdn.net/jpg/01/04/20/18/360_F_104201889_akJ4gafyCdIkgvAy7ZGxbtxXoPkcBryb.jpg");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
