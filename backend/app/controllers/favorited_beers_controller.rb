@@ -2,12 +2,12 @@ class FavoritedBeersController < ApplicationController
     before_action :set_params, only: [:show, :update, :destroy]
 
   def index
-    @favorited_beers = Favorited_beer.all
+    @favorited_beers = FavoritedBeer.all
     render json: @favorited_beers, only: [:id, :beer], status: 200
   end
 
   def create
-    @favorited_beer = Favorited_beer.create(favorited_beer_params)
+    @favorited_beer = FavoritedBeer.create(favorited_beer_params)
     render json: @favorited_beer, status: 200
   end
 
@@ -26,6 +26,6 @@ class FavoritedBeersController < ApplicationController
   end
 
   def set_params
-    @favorited_beer = Favorited_beer.find(params[:id])
+    @favorited_beer = FavoritedBeer.find(params[:id])
   end
 end
