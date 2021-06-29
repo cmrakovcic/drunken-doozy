@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class Random extends Component {
     render() {
         return (
-            <div>
-                <h1>Random Beer</h1>
+            <div className="App">
+                <header className="App-header">
+                    <h2>Random Beer</h2>
+                </header>
             </div>
         );
     }
