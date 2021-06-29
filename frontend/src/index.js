@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import manageFavoritedBeer from './reducers/manageFavoritedBeers';
+import favoritedBeersReducer from './reducers/favoritedBeersReducer';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -17,7 +17,7 @@ import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
 
 const store = createStore(
-  manageFavoritedBeer,
+  favoritedBeersReducer,
   applyMiddleware(thunk)
   //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
