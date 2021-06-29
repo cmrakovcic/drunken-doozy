@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import favoritedBeersReducer from './reducers/favoritedBeersReducer';
-import usersReducer from './reducers/usersReducer';
+import userReducer from './reducers/userReducer';
 import NavBar from './components/NavBar';
 import Home from './Home';
 import Login from './components/Login';
@@ -17,10 +17,16 @@ import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
 
+const rootReducer = combineReducers({
+  currentUser: userReducer,
+  favoritedBeers: favoritedBeersReducer
+})
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
-  favoritedBeersReducer,
-  applyMiddleware(thunk)
-  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
   )
 
 ReactDOM.render(
