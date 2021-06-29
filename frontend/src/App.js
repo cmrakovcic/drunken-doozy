@@ -18,7 +18,7 @@ const App = (props) => {
     return (
       <div className="App">
         <header className="App-header">
-           <img src={"https://pngimg.com/uploads/beer/beer_PNG2330.png"} className="App-logo" alt="logo" />
+          <img src={"https://pngimg.com/uploads/beer/beer_PNG2330.png"} className="App-logo" alt="logo" />
           <h1>
             Welcome to the Drunken Doozy!
           </h1>
