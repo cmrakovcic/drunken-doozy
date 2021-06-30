@@ -28,7 +28,7 @@ class Signup extends Component {
                 <header className="App-header">        
                 <h2>Signup</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="user">Email</label>
+                    <label htmlFor="user"></label>
                     <input
                         onChange={this.handleChange}
                         type="text"
@@ -36,9 +36,10 @@ class Signup extends Component {
                         value={this.state.user}
                         autoComplete="off"
                         id="user"
+                        placeholder="Email"
                     />
                     <div>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password"></label>
                     <input
                         onChange={this.handleChange}
                         type="text"
@@ -46,6 +47,7 @@ class Signup extends Component {
                         value={this.state.user}
                         autoComplete="off"
                         id="user"
+                        placeholder="Password"
                     />
                     </div>
                     {/* <input type="submit" value="Submit" /> */}
