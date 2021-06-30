@@ -20,7 +20,7 @@ const App = (props) => {
         <header className="App-header">
           <img src={"https://pngimg.com/uploads/beer/beer_PNG2330.png"} className="App-logo" alt="logo" />
           <h1>
-            Welcome to the Drunken Doozy!
+            The Drunken Doozy!
           </h1>
           <button onClick={handleLogin}>Login</button>
           <button onClick={handleSignup}>Signup</button>

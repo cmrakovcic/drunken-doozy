@@ -32,7 +32,7 @@ class Signup extends Component {
                         onChange={this.handleChange}
                         type="text"
                         email="user"
-                        // value={this.state.user}
+                        value={this.user}
                         autoComplete="off"
                         id="user"
                     />
@@ -42,7 +42,7 @@ class Signup extends Component {
                             onChange={this.handleChange}
                             type="text"
                             password="password"
-                            // value={this.state.user}
+                            value={this.user}
                             autoComplete="off"
                             id="user"
                         />
