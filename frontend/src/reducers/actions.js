@@ -24,3 +24,9 @@ export const addUserBE = (email) => {
         payload: newUser
       }
   }
+
+  export const removeUser = () => {
+    return {
+      type: "CLEAR_USER"
+    }
+  }
