@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Login extends Component {
     render() {
@@ -15,7 +16,8 @@ class Login extends Component {
                         <input type="password" name="password" placeholder="Password" />
                         <label htmlFor="password"></label>
                         </div>
-                        <input type="submit" value="submit" />
+                        {/* <input type="submit" value="submit" /> */}
+                        <button>Submit</button>
                     </form>
                 </header>
             </div>

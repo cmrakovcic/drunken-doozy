@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import '../App.css';
 // import { connect } from 'react-redux';
-import { addUser, addUserBE } from '../reducers/actions';
-// import { withRouter } from "react-router";
+// import { addUser, addUserBE } from '../reducers/actions';
 
 class Signup extends Component {
 
@@ -17,38 +17,41 @@ class Signup extends Component {
     
     handleSubmit = (evt) => {
         evt.preventDefault()
-        // this.props.addUser(this.state)
-        // this.props.addUserBE(this.state.user)
+        this.props.addUser(this.state)
+        this.props.addUserBE(this.state.user)
         this.props.history.push(`/home`)
       }
 
     render() {
         return (
-            <div>
-                <h1>Signup</h1>
+            <div className="App">
+                <header className="App-header">        
+                <h2>Signup</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="user">Email</label>
                     <input
                         onChange={this.handleChange}
                         type="text"
                         email="user"
-                        value={this.user}
+                        value={this.state.user}
                         autoComplete="off"
                         id="user"
                     />
                     <div>
-                        <label htmlFor="password">Password</label>
-                        <input
-                            onChange={this.handleChange}
-                            type="text"
-                            password="password"
-                            value={this.user}
-                            autoComplete="off"
-                            id="user"
-                        />
+                    <label htmlFor="password">Password</label>
+                    <input
+                        onChange={this.handleChange}
+                        type="text"
+                        password="password"
+                        value={this.state.user}
+                        autoComplete="off"
+                        id="user"
+                    />
                     </div>
-                    <input type="submit" value="Submit" />
+                    {/* <input type="submit" value="Submit" /> */}
+                    <button>Submit</button>
                 </form>
+                </header>
             </div>
 
         );
@@ -62,4 +65,4 @@ class Signup extends Component {
 // }
 
 export default Signup;
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps })(Signup);
+// export default connect(null, { addUserBE, addUser, mapDispatchToProps } )(Signup);
