@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Footer from './components/Footer';
 
 
 class Home extends Component {
@@ -14,6 +15,7 @@ class Home extends Component {
                     <p>Click on the "Favorited Beers" tab in the nav bar to view your favorited beers list.</p>
                     <p>Click on the "Random Beer" tab in the nav bar to genrate a random beer, along with the option to add it to your favorited beers list.</p>
                 </header>
+                < Footer/>
             </div>
         );
     }

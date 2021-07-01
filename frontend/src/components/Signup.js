@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
-// import { connect } from 'react-redux';
-// import { addUser, addUserBE } from '../reducers/actions';
+import { connect } from 'react-redux';
+import { addUser, addUserBE } from '../reducers/actions';
+import Footer from './Footer';
 
 class Signup extends Component {
 
@@ -54,17 +55,18 @@ class Signup extends Component {
                     <button>Submit</button>
                 </form>
                 </header>
+                < Footer/>
             </div>
 
         );
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         users: () => { dispatch(addUserBE) }
-//     }
-// }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        users: () => { dispatch(addUserBE) }
+    }
+}
 
-export default Signup;
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps } )(Signup);
+// export default Signup;
+export default connect(null, { addUserBE, addUser, mapDispatchToProps } )(Signup);
