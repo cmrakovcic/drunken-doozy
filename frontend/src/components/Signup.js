@@ -11,10 +11,8 @@ class Signup extends Component {
     }
 
     handleChange = (evt) => {
-        this.setState({
-          [evt.target.email]: evt.target.value
-        })
-      }
+        this.setState ({ [evt.target.name]: evt.target.value });
+    }
     
     handleSubmit = (evt) => {
         evt.preventDefault()
@@ -29,26 +27,26 @@ class Signup extends Component {
                 <header className="App-header">        
                 <h2>Signup</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="user"></label>
+                    <label htmlFor="email"></label>
                     <input
-                        onChange={this.handleChange}
-                        type="text"
-                        email="user"
-                        value={this.state.user}
-                        autoComplete="off"
-                        id="user"
+                        type="email"
+                        name="email"
+                        id="email"
                         placeholder="Email"
+                        autoComplete="off"
+                        value={this.state.email}
+                        onChange={this.handleChange}
                     />
                     <div>
                     <label htmlFor="password"></label>
                     <input
-                        onChange={this.handleChange}
-                        type="text"
-                        password="password"
-                        value={this.state.user}
-                        autoComplete="off"
-                        id="user"
+                        type="password"
+                        name="password"
+                        id="password"
                         placeholder="Password"
+                        autoComplete="off"
+                        value={this.state.password}
+                        onChange={this.handleChange}
                     />
                     </div>
                     {/* <input type="submit" value="Submit" /> */}
