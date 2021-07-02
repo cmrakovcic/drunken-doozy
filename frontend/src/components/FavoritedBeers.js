@@ -6,7 +6,7 @@ class FavoritedBeers extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h2>Favorited Beer</h2>
+                    <h2>Favorited Beers:</h2>
                 </header>
                 < Footer/>
             </div>

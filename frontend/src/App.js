@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import { useHistory } from 'react-router-dom';
 import Footer from './components/Footer';
-
-
 const App = (props) => {
 
   const history = useHistory();
@@ -26,7 +24,7 @@ const App = (props) => {
           <button onClick={handleLogin}>Login</button>
           <button onClick={handleSignup}>Signup</button>
         </header>
-        < Footer/> 
+        < Footer/>
       </div>
     );
 }
