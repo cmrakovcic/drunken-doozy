@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const GenerateRandom = () => {
     const history = useHistory();
     const handleRandom = () => {
-        history.push("/beers");
+        history.push("https://api.punkapi.com/v2/beers/random");
     }
     return (
         <div className="App">
