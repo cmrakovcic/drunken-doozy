@@ -1,12 +1,24 @@
-export default function manageFavoritedBeers(state = {
-    favoritedBeers: [],
-  }, action) {
-    switch(action.type){
-      case "ADD_BEER":
-        return {
-          favoritedBeers: state.favoritedBeers.concat(action.payload)
-        }
+const initialState = {
+    favoritedBeers: []
+  }
+  
+const favoritedBeersReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_FAVORITED_BEERS":
+      return {
+        ...state,
+        favoritedBeers: action.payload
+      }
+    
+    case "UPDATE_FAVORITED_BEERS":
+      return {
+        ...state,
+        favoritedBeers: action.payload
+      }
+      
       default:
         return state
     }
-  };
+  }
+  
+export default favoritedBeersReducer;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import { getAllBeers } from '../reducers/actions'
 
 class Beers extends Component {
     render() {
@@ -7,6 +8,7 @@ class Beers extends Component {
             <div className="App">
                 <header className="App-header">
                     <h2>List of Beers</h2>
+                    <li beers={getAllBeers}></li>
                 </header>
                 < Footer/>
             </div>

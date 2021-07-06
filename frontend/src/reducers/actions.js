@@ -35,8 +35,8 @@ export const getAllBeers = () => {
   return (dispatch) => {
     fetch(`https://api.punkapi.com/v2/beers`)
     .then(resp => resp.json())
-    .then(getAllBeers => {
-      dispatch(getAllBeers)
+    .then(allBeers => {
+      dispatch(allBeers)
     })
   } 
 }
@@ -53,7 +53,7 @@ export const getFavoritedBeers = () => {
 
 export const setFavoritedBeer = (favoritedBeers) => {
   return {
-    type: "SET_FAVORITED_BEER",
+    type: "SET_FAVORITED_BEERS",
     payload: favoritedBeers
   }
 }
