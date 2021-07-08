@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 // import BeerCard from '../components/BeerCard';
-// import FavoritedBeers from '../components/FavoritedBeers';
 
 class BeersContainer extends Component {
 
