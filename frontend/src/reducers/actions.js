@@ -31,14 +31,18 @@ export const removeUser = () => {
   }
 }
 
-export const getAllBeers = () => {
+export const getBeers = () => {
   return (dispatch) => {
-    fetch(`https://api.punkapi.com/v2/beers`)
+    dispatch({type: "LOADING"})
+    fetch("https://api.punkapi.com/v2/beers")
     .then(resp => resp.json())
-    .then(allBeers => {
-      dispatch(allBeers)
+    .then(beers =>{
+      dispatch({
+        type: "GET_BEERS",
+        payload: beers
+      })
     })
-  } 
+  }
 }
 
 export const getFavoritedBeers = () => {
