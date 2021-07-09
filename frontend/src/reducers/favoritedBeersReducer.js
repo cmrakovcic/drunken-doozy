@@ -4,13 +4,13 @@ const initialState = {
   
 const favoritedBeersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_FAVORITED_BEERS":
+    case "ADD_FAVORITED_BEER":
       return {
         ...state,
         favoritedBeers: action.payload
       }
     
-    case "UPDATE_FAVORITED_BEERS":
+    case "UPDATE_FAVORITED_BEER":
       return {
         ...state,
         favoritedBeers: action.payload

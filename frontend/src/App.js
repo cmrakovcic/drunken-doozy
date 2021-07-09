@@ -10,7 +10,7 @@ import Home from './Home';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
-import { getBeers } from './reducers/actions';
+import { getBeers } from './actions/beer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component{
@@ -59,4 +59,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {getBeers})(App);
+export default connect(mapStateToProps, { getBeers })(App);

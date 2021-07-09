@@ -8,9 +8,9 @@ export const getFavoritedBeers = () => {
   }
 }
   
-export const addFavoritedBeer = (favoritedBeers) => {
+export const addFavoritedBeer = (favoritedBeerObj) => {
   return {
-    type: "ADD_FAVORITED_BEERS",
-    payload: favoritedBeers
+    type: "ADD_FAVORITED_BEER",
+    payload: favoritedBeerObj
   }
 }
