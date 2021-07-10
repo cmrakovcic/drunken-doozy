@@ -12,6 +12,7 @@ class FavoritedBeersController < ApplicationController
   end
 
   def show
+    @favorited_beer = FavoritedBeer.all
     render json: @favorited_beer, status: 200
   end
 
