@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import Footer from './components/Footer';
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import NavBar from './components/NavBar';
 import Home from './Home';
 // import Login from './components/Login';
@@ -10,7 +10,7 @@ import Home from './Home';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
-import { getBeers } from './actions/beer';
+// import { getBeers } from './actions/beer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component{
@@ -19,10 +19,6 @@ class App extends Component{
     beers: [],
     favoritedBeers: [],
     loggedIn: true,
-  }
-
-  componentDidMount () {
-    this.props.getBeers()
   }
 
   render() {
@@ -53,10 +49,10 @@ class App extends Component{
   }; 
 }
 
-const mapStateToProps = (state) => {
-  return {
-    state
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     state
+//   }
+// }
 
-export default connect(mapStateToProps, { getBeers })(App);
+export default App;

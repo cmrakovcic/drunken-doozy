@@ -15,7 +15,7 @@ const favoritedBeersReducer = (state = initialState, action) => {
         ...state,
         favoritedBeers: action.payload
       }
-      
+
       default:
         return state
     }
