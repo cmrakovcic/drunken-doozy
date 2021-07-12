@@ -18,7 +18,7 @@ class App extends Component{
   state = {
     beers: [],
     favoritedBeers: [],
-    loggedIn: true,
+    loggedIn: true
   }
 
   render() {
