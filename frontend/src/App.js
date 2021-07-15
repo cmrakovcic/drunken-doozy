@@ -4,6 +4,7 @@ import './App.css';
 // import {connect} from 'react-redux';
 import NavBar from './components/NavBar';
 import Home from './Home';
+import Welcome from './components/Welcome';
 // import Login from './components/Login';
 // import Signup from './components/Signup';
 // import Logout from './components/Logout';
@@ -28,7 +29,7 @@ class App extends Component{
           {/* If you want navbar to go away change state of signedin */}
           {this.state.loggedIn ? <NavBar /> : true }
           <Switch>
-            <Route exact path="/" >
+            <Route exact path="/" component={Welcome}>
             </Route>
             <Route path="/home" component={Home}>
             </Route>

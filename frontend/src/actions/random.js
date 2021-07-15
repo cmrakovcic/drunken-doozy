@@ -11,5 +11,3 @@ export const fetchRandomBeer = () => {
       })
     }
 }
-
-export default fetchRandomBeer;

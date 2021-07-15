@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-// import GenerateRandom from './GenerateRandom';
 import { connect } from 'react-redux';
 import { fetchRandomBeer } from '../actions/random';
 import RandomBeers from './RandomBeers';
+
 class Random extends Component {
 
     state = {
