@@ -11,7 +11,7 @@ import userReducer from './reducers/userReducer';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
-  beers: beersReducer,
+  beersReducer: beersReducer,
   favoritedBeers: favoritedBeersReducer
 })
 

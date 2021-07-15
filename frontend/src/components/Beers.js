@@ -10,8 +10,8 @@ class Beers extends Component {
     }
 
     componentDidMount() {
-        // FETCH
         this.props.fetchAllBeers()
+        // debugger
     }
 
     render() {
@@ -26,4 +26,10 @@ class Beers extends Component {
     }
 }
 
-export default connect (null, { fetchAllBeers })(Beers);
+const mapStateToProps = (stateFromStore) => {
+    return {
+        beers: stateFromStore.beers
+    }
+}
+
+export default connect (mapStateToProps, { fetchAllBeers } )(Beers);

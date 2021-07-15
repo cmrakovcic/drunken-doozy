@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
-import { connect } from "react-redux"
-import Beers from './Beers'
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+// import Beer from './Beer';
 class BeerList extends Component {
     state = {
         beers: []
     }
 
     render() {
-        const beers = this.props.beers.map(beers => <Beers beers={beers} />)
+        const beers = this.props.beers.map(beer => <h1>{beer.name}</h1>)
+        // console.log("beers")
         return (
             <div>
-                {beers}
+                {beers }
             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => {
-    return{
-        beers: state.beers
+    return {
+        beers: state.beersReducer.beers
     }
 }
 
