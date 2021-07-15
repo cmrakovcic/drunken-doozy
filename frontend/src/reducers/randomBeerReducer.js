@@ -7,7 +7,7 @@ const randomBeerReducer = (state = initialState, action) => {
     case "GET_RANDOM":
       return {
         ...state,
-        randomBeer: [...state.randomBeer, ...action.payload]
+        randomBeer: [...action.payload]
       }
 
       default:

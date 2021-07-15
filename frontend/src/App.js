@@ -3,7 +3,7 @@ import './App.css';
 // import Footer from './components/Footer';
 // import {connect} from 'react-redux';
 import NavBar from './components/NavBar';
-import Home from './Home';
+import Home from './components/Home';
 import Welcome from './components/Welcome';
 // import Login from './components/Login';
 // import Signup from './components/Signup';
@@ -11,7 +11,6 @@ import Welcome from './components/Welcome';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
-// import { getBeers } from './actions/beer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component{

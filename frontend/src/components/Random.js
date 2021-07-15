@@ -18,9 +18,7 @@ class Random extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-
-                    <h2>Random Beer:</h2>
-                    < RandomBeers/>
+                    <div className="random-beer">< RandomBeers/></div>
                 </header>
                 < Footer/>
             </div>

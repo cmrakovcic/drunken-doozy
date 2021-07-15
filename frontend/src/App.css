@@ -54,3 +54,12 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+
+.random-beer {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-style: solid;
+  border-color: #825B1F;
+  width: 500px;
+  padding: 100px;
+}

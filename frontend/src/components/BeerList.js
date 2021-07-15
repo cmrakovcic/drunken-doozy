@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-// import Beer from './Beer';
+
 class BeerList extends Component {
     state = {
         beers: []
@@ -8,7 +8,6 @@ class BeerList extends Component {
 
     render() {
         const beers = this.props.beers.map(beer => <h1>{beer.name}</h1>)
-        // console.log("beers")
         return (
             <div>
                 {beers}
