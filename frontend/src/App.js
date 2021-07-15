@@ -28,19 +28,15 @@ class App extends Component{
           {/* If you want navbar to go away change state of signedin */}
           {this.state.loggedIn ? <NavBar /> : true }
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/" >
             </Route>
             <Route path="/home" component={Home}>
-              {/* <Home /> */}
             </Route>
             <Route path="/beers" component={Beers}>
-              {/* <BeersContainer /> */}
             </Route>
             <Route path="/favorited-beers" component={FavoritedBeers}>
-              {/* <FavoritedBeersContainer /> */}
             </Route>
             <Route path="/random" component={Random}>
-              {/* <Random /> */}
             </Route>
           </Switch>
         </Router>

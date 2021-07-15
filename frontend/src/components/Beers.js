@@ -11,7 +11,6 @@ class Beers extends Component {
 
     componentDidMount() {
         this.props.fetchAllBeers()
-        // debugger
     }
 
     render() {
@@ -26,9 +25,9 @@ class Beers extends Component {
     }
 }
 
-const mapStateToProps = (stateFromStore) => {
+const mapStateToProps = (state) => {
     return {
-        beers: stateFromStore.beers
+        beers: state.beers
     }
 }
 

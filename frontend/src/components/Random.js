@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-import GenerateRandom from './GenerateRandom';
+// import GenerateRandom from './GenerateRandom';
 import { connect } from 'react-redux';
 import { fetchRandomBeer } from '../actions/random';
-
+import RandomBeers from './RandomBeers';
 class Random extends Component {
 
     state = {
-        random: []
+        randomBeer: []
     }
 
     componentDidMount() {
@@ -20,7 +20,7 @@ class Random extends Component {
                 <header className="App-header">
 
                     <h2>Random Beer:</h2>
-                    < GenerateRandom/>
+                    < RandomBeers/>
                 </header>
                 < Footer/>
             </div>
@@ -28,4 +28,10 @@ class Random extends Component {
     }
 }
 
-export default connect(null, { fetchRandomBeer } )(Random);
+const mapStateToProps = (state) => {
+    return {
+        randomBeer: state.randomBeer
+    }
+}
+
+export default connect (mapStateToProps, { fetchRandomBeer } )(Random);

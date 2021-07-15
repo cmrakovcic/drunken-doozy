@@ -11,7 +11,7 @@ class BeerList extends Component {
         // console.log("beers")
         return (
             <div>
-                {beers }
+                {beers}
             </div>
         );
     }
