@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import BeerList from './BeerList';
 
 class Beers extends Component {
+    
     state = {
         beers: []
     }

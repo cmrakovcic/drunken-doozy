@@ -9,6 +9,11 @@ class FavoritedBeers extends Component {
     state = {
         favoritedBeers: []
     }
+
+    componentDidMount() {
+        this.props.getFavoritedBeers()
+    }
+
     render() {
         return (
             <div className="App">
@@ -21,5 +26,11 @@ class FavoritedBeers extends Component {
     }
 };
 
+const mapStateToProps = (state) => {
+    return {
+        favoritedBeers: state.favoritedBeers
+    }
+}
+
 // export default FavoritedBeers;
-export default connect(null, { getFavoritedBeers })(FavoritedBeers)
+export default connect(mapStateToProps, { getFavoritedBeers })(FavoritedBeers)
