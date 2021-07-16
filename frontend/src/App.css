@@ -59,6 +59,7 @@ h1 {
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
   border-style: solid;
+  border-radius: 25px;
   border-color: #825B1F;
   width: 500px;
   padding: 100px;

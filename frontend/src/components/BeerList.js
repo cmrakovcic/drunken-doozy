@@ -8,6 +8,7 @@ class BeerList extends Component {
 
     render() {
         const beers = this.props.beers.map(beer => <h1>{beer.name}</h1>)
+        
         return (
             <div>
                 {beers}
