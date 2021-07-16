@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import BeerCard from './BeerCard';
 
 class BeerList extends Component {
     state = {
@@ -7,8 +8,16 @@ class BeerList extends Component {
     }
 
     render() {
-        const beers = this.props.beers.map(beer => <h1>{beer.name}</h1>)
-        
+        const beers = this.props.beers.map(beer => (
+            < BeerCard
+                key={beer.id}
+                id={beer.id}
+                name={beer.name}
+                abv={beer.abv}
+                ibu={beer.ibu}
+                food_pairing={beer.food_pairing.join(", ")} 
+                tagline={beer.tagline}/>
+        ))        
         return (
             <div>
                 {beers}

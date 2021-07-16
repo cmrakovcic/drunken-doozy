@@ -17,7 +17,7 @@ class Beers extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <BeerList />
+                    <div className="beers"><br></br><BeerList /></div>
                 </header>
                 < Footer/>
             </div>
