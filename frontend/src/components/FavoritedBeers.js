@@ -18,7 +18,7 @@ class FavoritedBeers extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    < FavoritedBeersList/>
+                    <div className="favorited-beers"><br></br><FavoritedBeersList/></div>
                 </header>
                 < Footer/>
             </div>

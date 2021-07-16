@@ -1,6 +1,6 @@
 export const getFavoritedBeers = () => {
   return (dispatch) => {
-    fetch("http://127.0.0.1:3001/favorited-beers")
+    fetch("http://127.0.0.1:3001/favorited_beers")
       .then(resp => resp.json())
       .then(favoritedBeers =>{
         dispatch({

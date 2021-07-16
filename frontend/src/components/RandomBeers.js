@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import RandomBeerCard from './RandomBeerCard';
 
 class RandomBeers extends Component {
 
@@ -8,23 +9,20 @@ class RandomBeers extends Component {
     }
 
     render() {
-        const randomBeer = this.props.randomBeer.map(randomBeer => <h1>{randomBeer.name}</h1>)
-        const randomBeerTag = this.props.randomBeer.map(randomBeer => <p>Tagline: {randomBeer.tagline}</p>)
-        const randomBeerDescription = this.props.randomBeer.map(randomBeer => <p>Description: {randomBeer.description}</p>)
-        const randomBeerBrewDate = this.props.randomBeer.map(randomBeer => <p>First Brewed: {randomBeer.first_brewed}</p>)
-        const randomBeerABV = this.props.randomBeer.map(randomBeer => <p>ABV: {randomBeer.abv}%</p>)
-        const randomBeerIBU = this.props.randomBeer.map(randomBeer => <p>IBU: {randomBeer.ibu}</p>)
-        const randomBeerFoodPairing = this.props.randomBeer.map(randomBeer => <p>Food Pairing: {randomBeer.food_pairing.join(", ")}</p>)
+        const randomBeer = this.props.randomBeer.map(randomBeer => (
+            < RandomBeerCard
+                key={randomBeer.id}
+                id={randomBeer.id}
+                name={randomBeer.name}
+                abv={randomBeer.abv}
+                ibu={randomBeer.ibu}
+                food_pairing={randomBeer.food_pairing.join(", ")} 
+                tagline={randomBeer.tagline}/>
+        ))
         return (
             <div>
                 <p>
                     {randomBeer}
-                    {randomBeerTag}
-                    {randomBeerDescription}
-                    {randomBeerBrewDate}
-                    {randomBeerABV}
-                    {randomBeerIBU}
-                    {randomBeerFoodPairing}
                     <button>Favorite</button>
                 </p>
             </div>

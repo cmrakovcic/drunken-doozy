@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import FavoritedBeerCard from './FavoritedBeerCard';
 
 class FavoritedBeersList extends Component {
 
@@ -8,9 +9,19 @@ class FavoritedBeersList extends Component {
     }
 
     render() {
+        const favoritedBeers = this.props.favoritedBeers.map(favoritedBeer => (
+            < FavoritedBeerCard
+                key={favoritedBeer.id}
+                id={favoritedBeer.id}
+                name={favoritedBeer.name}
+                abv={favoritedBeer.abv}
+                ibu={favoritedBeer.ibu}
+                food_pairing={favoritedBeer.food_pairing.join(", ")}
+                />
+        ))
         return (
             <div>
-                
+                {favoritedBeers}
             </div>
         );
     }
@@ -18,7 +29,7 @@ class FavoritedBeersList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        favoritedBeers: state.beersReducer.favoritedBeers
+        favoritedBeers: state.favoritedBeersReducer.favoritedBeers
     }
 }
 

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
-class BeerCard extends Component {
+class RandomBeerCard extends Component {
     render() {
         return (
             <div 
-                id={`beer-card-${this.props.id}`}
-                className="card"
+                id={`random-beer-card-${this.props.id}`}
                 style={{
                         backgroundColor: `var(--${this.props.type})`, 
                         }}
@@ -15,11 +14,10 @@ class BeerCard extends Component {
                 <p>ABV: {this.props.abv}</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
-                <button>Favorite</button>
                 <br />
             </div>
         );
     }
 }
 
-export default BeerCard;
+export default RandomBeerCard;
