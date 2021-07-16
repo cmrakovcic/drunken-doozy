@@ -15,6 +15,7 @@ class BeerCard extends Component {
                 <p>ABV: {this.props.abv}</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
+                <button>Favorite</button>
                 {/* <button onClick={(e) => this.props.addPokemon(this.props.id)} >
                     {this.caughtPokemon() ? "Remove From Team" : "Add To Team"}
                 </button> */}

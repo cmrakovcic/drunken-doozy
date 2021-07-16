@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import BeerCard from './BeerCard';
 
 class BeerList extends Component {
+    
     state = {
         beers: []
     }

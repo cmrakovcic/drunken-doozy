@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import { getFavoritedBeers } from '../actions/favorited';
+import { connect } from 'react-redux';
+import FavoritedBeersList from './FavoritedBeersList';
 
 class FavoritedBeers extends Component {
+
+    state = {
+        favoritedBeers: []
+    }
     render() {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h2>Favorited Beers:</h2>
-                        <li>
-     
-                        </li>
+                    < FavoritedBeersList/>
                 </header>
                 < Footer/>
             </div>
@@ -17,4 +21,5 @@ class FavoritedBeers extends Component {
     }
 };
 
-export default FavoritedBeers;
+// export default FavoritedBeers;
+export default connect(null, { getFavoritedBeers })(FavoritedBeers)

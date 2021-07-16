@@ -25,6 +25,7 @@ class RandomBeers extends Component {
                     {randomBeerABV}
                     {randomBeerIBU}
                     {randomBeerFoodPairing}
+                    <button>Favorite</button>
                 </p>
             </div>
         );
