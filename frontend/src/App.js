@@ -10,6 +10,7 @@ import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Logout from './components/Logout';
 
 class App extends Component{
 
@@ -35,6 +36,8 @@ class App extends Component{
             <Route path="/favorited-beers" component={FavoritedBeers}>
             </Route>
             <Route path="/random" component={Random}>
+            </Route>
+            <Route path="/logout" component={Logout}>
             </Route>
           </Switch>
         </Router>
