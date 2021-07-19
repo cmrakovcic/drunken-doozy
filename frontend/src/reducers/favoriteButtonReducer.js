@@ -8,7 +8,7 @@ const favoriteButtonReducer = (state = initialState, action) => {
             return {
                 ...state,
                 // favoritedBeers: [...state.favoritedBeers, action.payload]
-                favoritedBeers: [...action.payload]
+                favoritedBeers: [action.payload]
             }
             default: 
                 return state

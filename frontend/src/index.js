@@ -9,12 +9,14 @@ import beersReducer from './reducers/beersReducer';
 import favoritedBeersReducer from './reducers/favoritedBeersReducer';
 import userReducer from './reducers/userReducer';
 import randomBeerReducer from './reducers/randomBeerReducer';
+import favoriteButtonReducer from './reducers/favoriteButtonReducer';
 
 const rootReducer = combineReducers({
   userReducer: userReducer,
   beersReducer: beersReducer,
   favoritedBeersReducer: favoritedBeersReducer,
-  randomBeersReducer: randomBeerReducer
+  randomBeersReducer: randomBeerReducer,
+  favoriteButtonReducer: favoriteButtonReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
