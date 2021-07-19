@@ -16,7 +16,7 @@ class FavoritedBeersList extends Component {
                 name={favoritedBeer.name}
                 abv={favoritedBeer.abv}
                 ibu={favoritedBeer.ibu}
-                food_pairing={favoritedBeer.food_pairing.join(", ")}
+                // food_pairing={favoritedBeer.food_pairing.join(", ")}
                 />
         ))
         return (

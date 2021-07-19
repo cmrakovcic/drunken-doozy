@@ -10,10 +10,10 @@ const favoritedBeersReducer = (state = initialState, action) => {
         favoritedBeers: [...state.favoritedBeers, action.payload]
       }
 
-    case "GET_FAVORITED_BEER":
+    case "GET_FAVORITED_BEERS":
       return {
         ...state,
-        favoritedBeers: [...state.favoritedBeers, ...action.payload]
+        favoritedBeers: [...action.payload]
       }
 
       default:
