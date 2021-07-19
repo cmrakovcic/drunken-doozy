@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
 import { getFavoritedBeers } from '../actions/favorited';
+import { fetchPostFavoritedBeers } from '../actions/favoriteButton';
 import { connect } from 'react-redux';
 import FavoritedBeersList from './FavoritedBeersList';
 
@@ -12,6 +13,7 @@ class FavoritedBeers extends Component {
 
     componentDidMount() {
         this.props.getFavoritedBeers()
+        this.props.fetchPostFavoritedBeers()
     }
 
     render() {
@@ -33,4 +35,4 @@ const mapStateToProps = (state) => {
 }
 
 // export default FavoritedBeers;
-export default connect(mapStateToProps, { getFavoritedBeers })(FavoritedBeers)
+export default connect(mapStateToProps, { getFavoritedBeers, fetchPostFavoritedBeers })(FavoritedBeers)

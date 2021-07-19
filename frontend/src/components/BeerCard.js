@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FavoriteButton from './FavoriteButton';
 
 class BeerCard extends Component {
     render() {
@@ -15,7 +16,7 @@ class BeerCard extends Component {
                 <p>ABV: {this.props.abv}</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
-                <button>Favorite</button>
+                < FavoriteButton/>
                 <br />
             </div>
         );

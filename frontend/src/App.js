@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Footer from './components/Footer';
-// import {connect} from 'react-redux';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Welcome from './components/Welcome';
