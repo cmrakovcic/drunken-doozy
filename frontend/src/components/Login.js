@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
+import { connect } from 'react-redux';
+import { addUser, addUserBE } from '../actions/user';
 import Footer from './Footer';
-// import { connect } from 'react-redux';
-// import { addUser, addUserBE } from '../reducers/actions';
 
 class Login extends Component {
 
@@ -18,7 +18,7 @@ class Login extends Component {
     
     handleSubmit = (evt) => {
         evt.preventDefault()
-        this.props.addUser(this.state)
+        this.props.addUser(this.state.user)
         this.props.addUserBE(this.state.user)
         this.props.history.push(`/home`)
       }
@@ -29,26 +29,26 @@ class Login extends Component {
                 <header className="App-header">        
                 <h2>Login</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="user"></label>
+                    <label htmlFor="email"></label>
                     <input
-                        onChange={this.handleChange}
-                        type="text"
-                        email="user"
-                        value={this.state.user}
-                        autoComplete="off"
+                        type="email"
+                        name="email"
                         id="user"
                         placeholder="Email"
+                        autoComplete="off"
+                        value={this.state.email}
+                        onChange={this.handleChange}
                     />
                     <div>
                     <label htmlFor="password"></label>
                     <input
-                        onChange={this.handleChange}
-                        type="text"
-                        password="password"
-                        value={this.state.user}
-                        autoComplete="off"
-                        id="user"
+                        type="password"
+                        name="password"
+                        id="password"
                         placeholder="Password"
+                        autoComplete="off"
+                        value={this.state.password}
+                        onChange={this.handleChange}
                     />
                     </div>
                     {/* <input type="submit" value="Submit" /> */}
@@ -68,5 +68,11 @@ class Login extends Component {
 //     }
 // }
 
-export default Login;
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps } )(Login);
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
+
+// export default Login;
+export default connect(mapStateToProps, { addUserBE, addUser } )(Login);

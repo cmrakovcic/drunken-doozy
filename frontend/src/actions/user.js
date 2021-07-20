@@ -1,19 +1,22 @@
-export const addUserBE = (email) => {
-    console.log("from addUserBE", email)
+export const addUserBE = () => {
     return (dispatch) => {
-        fetch("http://127.0.0.1:3001/users",{
+        fetch("http://localhost:3001/users",{
             method:'POST',
             headers: {
+                'Accept': 'application/json',
                 'Content-type': 'application/json',
-                'accept': 'application/json'
             },
             body: JSON.stringify({
-                email: email
+                currentUser: []
             })
         })
         .then(resp => resp.json())
         .then(user => {
-            dispatch(addUser(user))
+            dispatch({
+                type: "ADD_USER_BE",
+                payload: user
+            })
+            console.log("from addUserBE", user)
         })
     }
 }

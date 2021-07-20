@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-// import { connect } from 'react-redux';
-// import { addUser, addUserBE } from '../reducers/actions';
+import { connect } from 'react-redux';
+import { addUser, addUserBE } from '../actions/user';
 import Footer from './Footer';
 
 class Signup extends Component {
@@ -11,12 +11,14 @@ class Signup extends Component {
     }
 
     handleChange = (evt) => {
-        this.setState ({ [evt.target.name]: evt.target.value });
-    }
+        this.setState({
+          [evt.target.email]: evt.target.value
+        })
+      }
     
     handleSubmit = (evt) => {
         evt.preventDefault()
-        this.props.addUser(this.state)
+        this.props.addUser(this.state.user)
         this.props.addUserBE(this.state.user)
         this.props.history.push(`/home`)
       }
@@ -31,7 +33,7 @@ class Signup extends Component {
                     <input
                         type="email"
                         name="email"
-                        id="email"
+                        id="user"
                         placeholder="Email"
                         autoComplete="off"
                         value={this.state.email}
@@ -65,6 +67,11 @@ class Signup extends Component {
 //         users: () => { dispatch(addUserBE) }
 //     }
 // }
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
 
-export default Signup;
-// export default connect(null, { addUserBE, addUser, mapDispatchToProps } )(Signup);
+// export default Signup;
+export default connect(mapStateToProps, { addUserBE, addUser } )(Signup);

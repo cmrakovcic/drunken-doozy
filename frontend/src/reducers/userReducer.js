@@ -7,7 +7,13 @@ const initialState = {
       case "ADD_USER":
         return {
           ...state,
-          user: action.payload
+          newUser: [action.payload]
+        }
+
+      case "ADD_USER_BE":
+        return {
+          ...state,
+          user: [action.payload]
         }
       case "CLEAR_USER":
         return {
