@@ -3,12 +3,12 @@ class FavoritedBeersController < ApplicationController
 
   def index
     @favorited_beers = FavoritedBeer.all
-    render json: @favorited_beers, only: [:id, :beer], status: 200
+    render json: @favorited_beers, only: [:name, :tagline, :abv, :ibu], status: 200
   end
 
   def create
     @favorited_beer = FavoritedBeer.create(favorited_beer_params)
-    render json: @favorited_beer, status: 200
+    render json: @favorited_beer, only: [:name, :tagline, :abv, :ibu], status: 200
   end
 
   def show
@@ -23,7 +23,7 @@ class FavoritedBeersController < ApplicationController
   private
 
   def favorited_beer_params
-    params.require(:favorited_beer).permit(:id, :beer)
+    params.require(:favorited_beer).permit(:name, :tagline, :abv, :ibu)
   end
 
   def set_params

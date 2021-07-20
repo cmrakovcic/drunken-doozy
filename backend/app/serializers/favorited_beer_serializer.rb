@@ -1,4 +1,4 @@
 class FavoritedBeerSerializer < ActiveModel::Serializer
-  attributes :id, :beer
+  attributes :name, :tagline, :abv, :ibu
   belongs_to :user
 end

@@ -13,7 +13,10 @@
 ActiveRecord::Schema.define(version: 2021_06_28_195238) do
 
   create_table "favorited_beers", force: :cascade do |t|
-    t.string "beer"
+    t.string "name"
+    t.string "tagline"
+    t.decimal "abv"
+    t.decimal "ibu"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
