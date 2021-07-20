@@ -3,14 +3,13 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Welcome from './components/Welcome';
-// import Login from './components/Login';
-// import Signup from './components/Signup';
-// import Logout from './components/Logout';
 import Beers from './components/Beers';
 import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import Logout from './components/Logout';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component{
 
@@ -36,6 +35,10 @@ class App extends Component{
             <Route path="/favorited-beers" component={FavoritedBeers}>
             </Route>
             <Route path="/random" component={Random}>
+            </Route>
+            <Route path="/login" component={Login}>
+            </Route>
+            <Route path="/signup" component={Signup}>
             </Route>
             <Route path="/logout" component={Logout}>
             </Route>
