@@ -7,7 +7,7 @@ export const fetchPostFavoritedBeers = () => {
             'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                favoritedBeers: []
+                // favoritedBeers: []
             }),
         })
         .then(resp => resp.json())

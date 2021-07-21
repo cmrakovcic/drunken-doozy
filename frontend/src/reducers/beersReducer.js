@@ -7,7 +7,7 @@ const beersReducer = (state = initialState, action) => {
     case "GET_BEERS":
       return {
         ...state,
-        beers: [...state.beers, ...action.payload]
+        beers: [...action.payload]
       }
 
       default:

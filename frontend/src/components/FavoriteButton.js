@@ -9,7 +9,10 @@ class FavoriteButton extends Component {
         favoritedBeers: []
     }
 
-    handleFavorite = () => {
+    handleFavorite = (evt) => {
+        this.setState({
+            [evt.target.id]: evt.target.id
+        })
         this.props.fetchPostFavoritedBeers()
     }
 
