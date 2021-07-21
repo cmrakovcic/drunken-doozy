@@ -17,10 +17,8 @@ ActiveRecord::Schema.define(version: 2021_06_28_195238) do
     t.string "tagline"
     t.decimal "abv"
     t.decimal "ibu"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_favorited_beers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

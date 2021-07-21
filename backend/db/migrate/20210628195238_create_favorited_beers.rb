@@ -5,7 +5,7 @@ class CreateFavoritedBeers < ActiveRecord::Migration[6.1]
       t.string :tagline
       t.decimal :abv
       t.decimal :ibu
-      t.references :user
+      # t.references :user
 
       t.timestamps
     end
