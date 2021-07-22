@@ -27,8 +27,8 @@ class Signup extends Component {
         return (
             <div className="App">
                 <header className="App-header">        
+                <form onSubmit={this.handleSubmit} className="login-signup">
                 <h2>Signup</h2>
-                <form onSubmit={this.handleSubmit}>
                     <label htmlFor="email"></label>
                     <input
                         type="email"
