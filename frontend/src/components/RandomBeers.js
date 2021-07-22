@@ -22,10 +22,8 @@ class RandomBeers extends Component {
         ))
         return (
             <div>
-                <p>
-                    {randomBeer}
-                    < FavoriteButton/>
-                </p>
+                {randomBeer}
+                < FavoriteButton/>
             </div>
         );
     }
