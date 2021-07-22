@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2021_06_28_195238) do
     t.string "tagline"
     t.decimal "abv"
     t.decimal "ibu"
+    t.string "food_pairing"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
