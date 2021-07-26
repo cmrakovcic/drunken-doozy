@@ -8,7 +8,6 @@ import FavoritedBeers from './components/FavoritedBeers';
 import Random from './components/Random';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Logout from './components/Logout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component{
@@ -39,8 +38,6 @@ class App extends Component{
             <Route path="/login" component={Login}>
             </Route>
             <Route path="/signup" component={Signup}>
-            </Route>
-            <Route path="/logout" component={Logout}>
             </Route>
           </Switch>
         </Router>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../NavBar.css';
+import Logout from './Logout';
 
 const NavBar = () => {
   return (
@@ -19,7 +20,7 @@ const NavBar = () => {
           <NavLink to="/random">Random Beer</NavLink>
         </li>
         <li>
-          <NavLink to="/logout">Logout</NavLink>
+          <Logout />
         </li>
       </ul>
     </div>

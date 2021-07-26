@@ -1,32 +1,29 @@
-// import React, { Component } from 'react';
-
-// class Logout extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h2>Logout</h2>
-//             </div>
-//         );
-//     }
-// }
-
-// export default Logout;
-
+import React, { Component } from 'react';
 import '../App.css';
-import { useHistory } from "react-router-dom";
+import { Redirect } from 'react-router-dom'
+class Logout extends Component {
 
-const Logout = () => {
-    const history = useHistory();
-    const handleLogout = () => {
-        history.push("/");
+    state = {
+        navigate: false
     }
-    return (
-        <div className="App">
-            <header className="App-header">
-                <button onClick={handleLogout}>Logout</button>
-            </header>
-        </div>
-    );
+
+    logout = () => {
+        localStorage.clear("token")
+        this.setState({navigate: true})
+    }
+
+    render() {
+
+        const {navigate} = this.state
+
+        if (navigate) {
+            return <Redirect to="/" push={true} />
+        }
+
+        return (
+            <button onClick={this.logout}>Logout</button>
+        );
+    }
 }
 
 export default Logout;

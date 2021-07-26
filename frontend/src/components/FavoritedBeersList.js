@@ -24,6 +24,8 @@ class FavoritedBeersList extends Component {
         return (
             <div>
                 {favoritedBeers}
+                {/* <button onClick={_=> this.props.deleteFavoritedBeer(this.props.favoritedBeer.id)}>delete</button> */}
+
             </div>
         );
     }
@@ -34,6 +36,11 @@ const mapStateToProps = (state) => {
         favoritedBeers: state.favoritedBeersReducer.favoritedBeers
     }
 }
+
+// const mapDispatchToProps = dispatch => ({
+//     addFavoritedBeer: name => dispatch({ type: "ADD_FAVORITED_BEER", name }),
+//     deleteFavoritedBeer: id=> dispatch({type: "DELETE_FAVORITED_BEER", id: id})
+// })
 
 // export default FavoritedBeersList;
 export default connect(mapStateToProps)(FavoritedBeersList);
