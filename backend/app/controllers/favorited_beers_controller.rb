@@ -1,5 +1,6 @@
 class FavoritedBeersController < ApplicationController
-    before_action :set_params, only: [:show, :destroy]
+    before_action :set_params, only: [:destroy]
+    # before_action :set_params
 
   def index
     @favorited_beers = FavoritedBeer.all
@@ -22,7 +23,6 @@ class FavoritedBeersController < ApplicationController
 
   def destroy
     # binding.pry
-    @favorited_beer = FavoritedBeer.find(params[:id])
     @favorited_beer.destroy
   end
 
@@ -34,6 +34,6 @@ class FavoritedBeersController < ApplicationController
   end
 
   def set_params
-    @favorited_beer = FavoritedBeer.find(params[:id])
+    @favorited_beer = FavoritedBeer.find_by(id: params[:id])
   end
 end
