@@ -4,7 +4,14 @@ import { connect } from "react-redux"
 import { deleteFavoritedBeer } from '../actions/deleteButton';
 class DeleteButton extends Component {
 
-    handleDelete = () => {
+    state = {
+        favoritedBeers: []
+    }
+
+    handleDelete = (evt) => {
+        this.setState({
+            [evt.target.id]: evt.target.id
+        })
         this.props.deleteFavoritedBeer()
     }
 
