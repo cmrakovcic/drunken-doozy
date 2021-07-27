@@ -25,7 +25,8 @@ class BeersContainer extends Component {
                 tagline={beer.tagline}/>
         ))        
         return (
-            <div>
+            <div id="beer-container">
+                <br></br>
                 {beers}
             </div>
         );

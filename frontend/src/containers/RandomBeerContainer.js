@@ -26,7 +26,7 @@ class RandomBeerContainer extends Component {
                 tagline={randomBeer.tagline}/>
         ))
         return (
-            <div>
+            <div id="random-beer-container">
                 {randomBeer}
                 < FavoriteButton/>
             </div>

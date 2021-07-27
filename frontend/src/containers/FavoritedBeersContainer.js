@@ -27,7 +27,8 @@ class FavoritedBeersContainer extends Component {
                 />
         ))
         return (
-            <div>
+            <div id="favorited-beer-container">
+                <br></br>
                 {favoritedBeers}
                 {/* <button onClick={_=> this.props.deleteFavoritedBeer(this.props.favoritedBeer.id)}>delete</button> */}
 
