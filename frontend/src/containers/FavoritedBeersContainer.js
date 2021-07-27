@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { getFavoritedBeers } from '../actions/favorited';
 import FavoritedBeerCard from '../components/FavoritedBeerCard';
 
 class FavoritedBeersContainer extends Component {
 
     state = {
         favoritedBeers: []
+    }
+
+    componentDidMount() {
+        this.props.getFavoritedBeers()
     }
 
     render() {
@@ -42,5 +47,4 @@ const mapStateToProps = (state) => {
 //     deleteFavoritedBeer: id=> dispatch({type: "DELETE_FAVORITED_BEER", id: id})
 // })
 
-// export default FavoritedBeersList;
-export default connect(mapStateToProps)(FavoritedBeersContainer);
+export default connect(mapStateToProps, { getFavoritedBeers })(FavoritedBeersContainer);

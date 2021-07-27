@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-import { getFavoritedBeers } from '../actions/favorited';
-import { connect } from 'react-redux';
 import FavoritedBeersContainer from '../containers/FavoritedBeersContainer';
 
 class FavoritedBeers extends Component {
-
-    state = {
-        favoritedBeers: []
-    }
-
-    componentDidMount() {
-        this.props.getFavoritedBeers()
-    }
 
     render() {
         return (
@@ -28,10 +18,10 @@ class FavoritedBeers extends Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    return {
-        favoritedBeers: state.favoritedBeers
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         favoritedBeers: state.favoritedBeers
+//     }
+// }
 
-export default connect(mapStateToProps, { getFavoritedBeers })(FavoritedBeers)
+export default FavoritedBeers;
