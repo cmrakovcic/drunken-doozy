@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Footer from './Footer';
 import { connect } from 'react-redux';
 import { fetchRandomBeer } from '../actions/random';
-import RandomBeers from './RandomBeers';
+import RandomBeersContainer from '../containers/RandomBeerContainer';
 
 class Random extends Component {
 
@@ -18,7 +18,9 @@ class Random extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <div className="random-beer">< RandomBeers/></div>
+                    <div className="random-beer">
+                        < RandomBeersContainer/>
+                    </div>
                 </header>
                 < Footer/>
             </div>

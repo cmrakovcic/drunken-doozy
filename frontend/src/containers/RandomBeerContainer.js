@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import FavoriteButton from './FavoriteButton';
-import RandomBeerCard from './RandomBeerCard';
+import FavoriteButton from '../components/FavoriteButton';
+import RandomBeerCard from '../components/RandomBeerCard';
 
-class RandomBeers extends Component {
+class RandomBeerContainer extends Component {
 
     state = {
         randomBeer: []
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(RandomBeers);
+export default connect(mapStateToProps)(RandomBeerContainer);

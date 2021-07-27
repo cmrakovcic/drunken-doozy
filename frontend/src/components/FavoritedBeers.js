@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Footer from './Footer';
 import { getFavoritedBeers } from '../actions/favorited';
 import { connect } from 'react-redux';
-import FavoritedBeersList from './FavoritedBeersList';
+import FavoritedBeersContainer from '../containers/FavoritedBeersContainer';
 
 class FavoritedBeers extends Component {
 
@@ -18,7 +18,9 @@ class FavoritedBeers extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <div className="favorited-beers"><br></br><FavoritedBeersList/></div>
+                    <div className="favorited-beers"><br></br>
+                        <FavoritedBeersContainer/>
+                    </div>
                 </header>
                 < Footer/>
             </div>

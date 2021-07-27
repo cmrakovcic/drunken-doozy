@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Footer from './Footer';
 import { connect } from 'react-redux';
 import { fetchAllBeers } from '../actions/beer';
-import BeerList from './BeerList';
+import BeersContainer from '../containers/BeersContainer';
 
 class Beers extends Component {
     
@@ -18,7 +18,9 @@ class Beers extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <div className="beers"><br></br><BeerList /></div>
+                    <div className="beers"><br></br>
+                        <BeersContainer />
+                    </div>
                 </header>
                 < Footer/>
             </div>

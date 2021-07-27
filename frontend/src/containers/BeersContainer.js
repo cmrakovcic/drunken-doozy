@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-// import BeerCard from '../components/BeerCard';
+import { connect } from "react-redux";
+import BeerCard from '../components/BeerCard';
 
 class BeersContainer extends Component {
-
-    componentDidMount(){
-        console.log("BEERCONTAINER MOUNT")
+    
+    state = {
+        beers: []
     }
 
     render() {
+        const beers = this.props.beers.map(beer => (
+            < BeerCard
+                key={beer.id}
+                id={beer.id}
+                name={beer.name}
+                abv={beer.abv}
+                ibu={beer.ibu}
+                food_pairing={beer.food_pairing.join(", ")} 
+                tagline={beer.tagline}/>
+        ))        
         return (
             <div>
-                <Switch>
-                    <Route>
-
-                    </Route>
-                </Switch>
+                {beers}
             </div>
         );
     }
 }
 
-export default BeersContainer;
+const mapStateToProps = (state) => {
+    return {
+        beers: state.beersReducer.beers
+    }
+}
+
+export default connect(mapStateToProps)(BeersContainer);
