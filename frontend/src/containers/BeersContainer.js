@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { fetchAllBeers } from '../actions/beer';
 import BeerCard from '../components/BeerCard';
 
 class BeersContainer extends Component {
     
     state = {
         beers: []
+    }
+
+    componentDidMount() {
+        this.props.fetchAllBeers()
     }
 
     render() {
@@ -33,4 +38,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(BeersContainer);
+export default connect(mapStateToProps, { fetchAllBeers })(BeersContainer);

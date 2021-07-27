@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-import { connect } from 'react-redux';
-import { fetchAllBeers } from '../actions/beer';
 import BeersContainer from '../containers/BeersContainer';
 
 class Beers extends Component {
-    
-    state = {
-        beers: []
-    }
-
-    componentDidMount() {
-        this.props.fetchAllBeers()
-    }
 
     render() {
         return (
@@ -28,10 +18,4 @@ class Beers extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        beers: state.beers
-    }
-}
-
-export default connect (mapStateToProps, { fetchAllBeers } )(Beers);
+export default Beers;
