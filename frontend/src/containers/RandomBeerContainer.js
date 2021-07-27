@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { fetchRandomBeer } from '../actions/random';
 import FavoriteButton from '../components/FavoriteButton';
 import RandomBeerCard from '../components/RandomBeerCard';
 
@@ -7,6 +8,10 @@ class RandomBeerContainer extends Component {
 
     state = {
         randomBeer: []
+    }
+
+    componentDidMount() {
+        this.props.fetchRandomBeer()
     }
 
     render() {
@@ -35,4 +40,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(RandomBeerContainer);
+export default connect(mapStateToProps, { fetchRandomBeer })(RandomBeerContainer);
