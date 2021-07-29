@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import DeleteButton from './DeleteButton';
+import DeleteButton from './DeleteButton';
 
 
 class FavoritedBeerCard extends Component {
@@ -17,9 +17,7 @@ class FavoritedBeerCard extends Component {
                 <p>ABV: {this.props.abv}%</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
-                {/* <button>Delete</button> */}
-                {/* < DeleteButton/> */}
-                <button onClick={_=> this.props.deleteFavoritedBeer(this.props.favoritedBeer.id)}>delete</button>
+                < DeleteButton/>
                 <br />
             </div>
         );

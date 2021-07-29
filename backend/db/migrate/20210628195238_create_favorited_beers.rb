@@ -6,7 +6,6 @@ class CreateFavoritedBeers < ActiveRecord::Migration[6.1]
       t.decimal :abv
       t.decimal :ibu
       t.string :food_pairing
-      # t.references :user
 
       t.timestamps
     end

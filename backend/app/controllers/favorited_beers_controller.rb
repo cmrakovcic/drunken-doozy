@@ -1,18 +1,15 @@
 class FavoritedBeersController < ApplicationController
-    before_action :set_params, only: [:destroy]
-    # before_action :set_params
+  before_action :set_favorited_beer, only: [:show, :destroy]
 
   def index
     @favorited_beers = FavoritedBeer.all
-    # render json: @favorited_beers, only: [:name, :tagline, :abv, :ibu], status: 200
     render json: @favorited_beers, status: 200
 
   end
 
   def create
     @favorited_beer = FavoritedBeer.create(favorited_beer_params)
-    # render json: @favorited_beer, only: [:name, :tagline, :abv, :ibu], status: 200
-    render json: @favorited_beers, status: 200
+    render json: @favorited_beer, status: 200
 
   end
 
@@ -29,11 +26,10 @@ class FavoritedBeersController < ApplicationController
   private
 
   def favorited_beer_params
-    params.permit(:id, :name, :tagline, :abv, :ibu, :food_pairing)
-    # params.require(:favorited_beer).permit(:name, :tagline, :abv, :ibu, :food_pairing)
+    params(:favorited_beers).permit(:name, :tagline, :abv, :ibu, :food_pairing)
   end
 
-  def set_params
-    @favorited_beer = FavoritedBeer.find_by(id: params[:id])
+  def set_favorited_beer
+    @favorited_beer = FavoritedBeer.find(params[:id])
   end
 end

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { getFavoritedBeers } from '../actions/favorited';
 import FavoritedBeerCard from '../components/FavoritedBeerCard';
+// import { deleteFavoritedBeer } from '../reducers/deleteButtonReducer';
 
 class FavoritedBeersContainer extends Component {
 
@@ -24,14 +25,13 @@ class FavoritedBeersContainer extends Component {
                 // food_pairing={favoritedBeer.food_pairing.join(", ")}
                 food_pairing={favoritedBeer.food_pairing}
                 tagline={favoritedBeer.tagline}
+                deleteFavoritedBeer={favoritedBeer.deleteFavoritedBeer}
                 />
         ))
         return (
             <div id="favorited-beer-container">
                 <br></br>
                 {favoritedBeers}
-                {/* <button onClick={_=> this.props.deleteFavoritedBeer(this.props.favoritedBeer.id)}>delete</button> */}
-
             </div>
         );
     }

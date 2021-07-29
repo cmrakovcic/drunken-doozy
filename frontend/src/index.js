@@ -7,13 +7,11 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import beersReducer from './reducers/beersReducer';
 import favoritedBeersReducer from './reducers/favoritedBeersReducer';
-import userReducer from './reducers/userReducer';
 import randomBeerReducer from './reducers/randomBeerReducer';
 import favoriteButtonReducer from './reducers/favoriteButtonReducer';
 import deleteButtonReducer from './reducers/deleteButtonReducer';
 
 const rootReducer = combineReducers({
-  userReducer: userReducer,
   beersReducer: beersReducer,
   favoritedBeersReducer: favoritedBeersReducer,
   randomBeersReducer: randomBeerReducer,

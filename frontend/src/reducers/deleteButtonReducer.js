@@ -1,16 +1,27 @@
+import { destroyFavoritedBeer } from '../actions/deleteButton';
+
 const initialState = {
     favoritedBeers: [],
 }
 
+export const removeFavoritedBeer = (id) => ({
+    type: "DELETE_FAVORITED_BEER", 
+    payload: id
+})
+
+export const deleteFavoritedBeer = (id) => {
+    return (dispatch) => {
+      destroyFavoritedBeer(id)
+        .then(() => dispatch(removeFavoritedBeer(id)))
+    }
+  }
+
 const deleteButtonReducer = (state = initialState, action) => {
     switch(action.type){
         case "DELETE_FAVORITED_BEER":
-            // const id = action.payload.id
             return {
-                // ...state,
-                // favoritedBeer: [...state.favoritedBeer, action.payload]
-                // favoritedBeers: [...state.favoritedBeers.filter(favoritedBeer => favoritedBeer.id !== id)]
-                favoritedBeers: [...state.favoritedBeers.filter(favoritedBeer => favoritedBeer !== action.payload)]
+                ...state,
+                favoritedBeers: [...state.favoritedBeers.filter(favoritedBeer => favoritedBeer.id !== action.payload)]
             }
             default: 
                 return state
