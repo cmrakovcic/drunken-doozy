@@ -9,7 +9,7 @@ class FavoritedBeersController < ApplicationController
 
   def create
     @favorited_beer = FavoritedBeer.create(favorited_beer_params)
-    render json: @favorited_beer, status: 200
+    render json: @favorited_beers, status: 200
 
   end
 
@@ -26,7 +26,7 @@ class FavoritedBeersController < ApplicationController
   private
 
   def favorited_beer_params
-    params(:favorited_beers).permit(:name, :tagline, :abv, :ibu, :food_pairing)
+    params.permit(:name, :tagline, :abv, :ibu, :food_pairing)
   end
 
   def set_favorited_beer
