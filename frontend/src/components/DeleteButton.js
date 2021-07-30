@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { connect } from "react-redux"
-// import { destroyFavoritedBeer } from '../actions/deleteButton';
-import { deleteFavoritedBeer } from '../reducers/deleteButtonReducer';
+import { deleteFavoritedBeer } from '../actions/deleteButton';
 
 class DeleteButton extends Component {
 
@@ -27,5 +26,4 @@ class DeleteButton extends Component {
 }
 
 // export default DeleteButton;
-// export default connect (null, { destroyFavoritedBeer })(DeleteButton);
 export default connect (null, { deleteFavoritedBeer })(DeleteButton);
