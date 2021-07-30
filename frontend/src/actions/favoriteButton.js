@@ -1,10 +1,3 @@
-// export const addFavoritedBeer = (favoritedBeers) => {
-//   return {
-//     type: "ADD_FAVORITED_BEER",
-//     payload: favoritedBeers
-//   }
-// }
-
 export const fetchPostFavoritedBeers = () => {
     return (dispatch) => {
       fetch('http://localhost:3001/favorited_beers', {
@@ -27,3 +20,10 @@ export const fetchPostFavoritedBeers = () => {
         })
     }
   }
+
+// export const addFavoritedBeer = (favoritedBeers) => {
+//   return {
+//     type: "ADD_FAVORITED_BEER",
+//     payload: favoritedBeers
+//   }
+// }

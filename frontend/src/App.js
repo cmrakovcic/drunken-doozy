@@ -18,7 +18,6 @@ class App extends Component{
     return (
       <div className="App">
         <Router>
-          {/* If you want navbar to go away change state of signedin */}
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home}>
@@ -35,11 +34,5 @@ class App extends Component{
     )
   }; 
 }
-
-// const mapStateToProps = (state) => {
-//   return {
-//     state
-//   }
-// }
 
 export default App;

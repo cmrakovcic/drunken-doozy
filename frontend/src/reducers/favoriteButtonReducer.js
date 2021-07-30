@@ -7,7 +7,6 @@ const favoriteButtonReducer = (state = initialState, action) => {
         case "POST_FAVORITED_BEERS":
             return {
                 ...state,
-                // favoritedBeers: [...state.favoritedBeers, action.payload]
                 favoritedBeers: [action.payload]
             }
             default: 
@@ -16,6 +15,7 @@ const favoriteButtonReducer = (state = initialState, action) => {
 }
 
 export default favoriteButtonReducer;
+
 // import uuid from 'uuid';
 
 // const initialState = {

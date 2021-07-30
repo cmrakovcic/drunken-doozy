@@ -43,9 +43,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//     addFavoritedBeer: name => dispatch({ type: "ADD_FAVORITED_BEER", name }),
-//     deleteFavoritedBeer: id=> dispatch({type: "DELETE_FAVORITED_BEER", id: id})
-// })
-
 export default connect(mapStateToProps, { getFavoritedBeers })(FavoritedBeersContainer);
