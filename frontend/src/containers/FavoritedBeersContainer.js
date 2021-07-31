@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { getFavoritedBeers } from '../actions/favorited';
 import FavoritedBeerCard from '../components/FavoritedBeerCard';
-// import { deleteFavoritedBeer } from '../reducers/deleteButtonReducer';
 
 class FavoritedBeersContainer extends Component {
 

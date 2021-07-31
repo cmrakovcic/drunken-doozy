@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { connect } from "react-redux"
-import { fetchPostFavoritedBeers } from '../actions/favoriteButton';
+import { fetchPostFavoritedBeers } from '../actions/favorited';
 
 class FavoriteButton extends Component {
 

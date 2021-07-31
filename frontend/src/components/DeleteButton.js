@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { connect } from "react-redux"
-import { deleteFavoritedBeer } from '../actions/deleteButton';
+import { deleteFavoritedBeer } from '../actions/favorited';
 
 class DeleteButton extends Component {
 

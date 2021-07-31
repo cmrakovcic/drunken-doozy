@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchRandomBeer } from '../actions/random';
-import FavoriteButton from '../components/FavoriteButton';
 import RandomBeerCard from '../components/RandomBeerCard';
 
 class RandomBeerContainer extends Component {
@@ -28,7 +27,6 @@ class RandomBeerContainer extends Component {
         return (
             <div id="random-beer-container">
                 {randomBeer}
-                < FavoriteButton/>
             </div>
         );
     }
