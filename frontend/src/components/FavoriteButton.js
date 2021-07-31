@@ -32,10 +32,4 @@ class FavoriteButton extends Component {
     }
 }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         favoritedBeers: state.favoritedBeersReducer.favoritedBeers
-//     }
-// }
-
 export default connect(null, { fetchPostFavoritedBeers })(FavoriteButton);

@@ -11,10 +11,3 @@ export const getFavoritedBeers = () => {
       })
     }
 }
-
-// export const addFavoritedBeer = (favoritedBeers) => {
-//   return {
-//     type: "ADD_FAVORITED_BEER",
-//     payload: favoritedBeers
-//   }
-// }

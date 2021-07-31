@@ -8,15 +8,11 @@ import thunk from 'redux-thunk';
 import beersReducer from './reducers/beersReducer';
 import favoritedBeersReducer from './reducers/favoritedBeersReducer';
 import randomBeerReducer from './reducers/randomBeerReducer';
-import favoriteButtonReducer from './reducers/favoriteButtonReducer';
-import deleteButtonReducer from './reducers/deleteButtonReducer';
 
 const rootReducer = combineReducers({
   beersReducer: beersReducer,
   favoritedBeersReducer: favoritedBeersReducer,
-  randomBeersReducer: randomBeerReducer,
-  favoriteButtonReducer: favoriteButtonReducer,
-  deleteButtonReducer: deleteButtonReducer
+  randomBeersReducer: randomBeerReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
