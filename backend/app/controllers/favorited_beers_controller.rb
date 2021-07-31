@@ -21,12 +21,13 @@ class FavoritedBeersController < ApplicationController
   def destroy
     # binding.pry
     @favorited_beer.destroy
+    render json: @favorited_beer, status: 200
   end
 
   private
 
   def favorited_beer_params
-    params.permit(:name, :tagline, :abv, :ibu, :food_pairing)
+    params.require(:favorited_beers).permit(:id, :name, :tagline, :abv, :ibu, :food_pairing)
   end
 
   def set_favorited_beer
