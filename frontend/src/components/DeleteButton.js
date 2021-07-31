@@ -13,7 +13,7 @@ class DeleteButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.deleteFavoritedBeer()
+        this.props.deleteFavoritedBeer(this.props.id)
     }
 
     render() {

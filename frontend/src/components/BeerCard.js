@@ -16,7 +16,15 @@ class BeerCard extends Component {
                 <p>ABV: {this.props.abv}%</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
-                < FavoriteButton/>
+                < FavoriteButton
+                    key={this.props.id}
+                    id={this.props.id}
+                    name={this.props.name}
+                    abv={this.props.abv}
+                    ibu={this.props.ibu}
+                    // food_pairing={this.props.food_pairing.join(", ")}
+                    food_pairing={this.props.food_pairing}
+                    tagline={this.props.tagline}/>
                 <br />
             </div>
         );

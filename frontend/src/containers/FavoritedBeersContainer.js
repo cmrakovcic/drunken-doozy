@@ -25,7 +25,6 @@ class FavoritedBeersContainer extends Component {
                 // food_pairing={favoritedBeer.food_pairing.join(", ")}
                 food_pairing={favoritedBeer.food_pairing}
                 tagline={favoritedBeer.tagline}
-                deleteFavoritedBeer={favoritedBeer.deleteFavoritedBeer}
                 />
         ))
         return (

@@ -1,4 +1,4 @@
-export const fetchPostFavoritedBeers = () => {
+export const fetchPostFavoritedBeers = (beer) => {
     return (dispatch) => {
       fetch('http://localhost:3001/favorited_beers', {
         method: 'POST',
@@ -7,7 +7,7 @@ export const fetchPostFavoritedBeers = () => {
             'Content-Type': 'application/json',
         },
             body: JSON.stringify({
-                favoritedBeers: []
+                favorited_beers: beer
             }),
         })
         .then(resp => resp.json())
@@ -20,10 +20,3 @@ export const fetchPostFavoritedBeers = () => {
         })
     }
   }
-
-// export const addFavoritedBeer = (favoritedBeers) => {
-//   return {
-//     type: "ADD_FAVORITED_BEER",
-//     payload: favoritedBeers
-//   }
-// }

@@ -13,7 +13,14 @@ class FavoriteButton extends Component {
         this.setState({
             [evt.target.id]: evt.target.id
         })
-        this.props.fetchPostFavoritedBeers()
+        const beer = {
+            name: this.props.name,
+            tagline: this.props.tagline,
+            abv: this.props.abv,
+            ibu: this.props.ibu,
+            food_pairing: this.props.food_pairing,
+        }
+        this.props.fetchPostFavoritedBeers(beer)
     }
 
     render() {

@@ -17,7 +17,8 @@ class FavoritedBeerCard extends Component {
                 <p>ABV: {this.props.abv}%</p>
                 <p>IBU: {this.props.ibu}</p>
                 <p>Food Pairing: {this.props.food_pairing}</p>
-                < DeleteButton/>
+                < DeleteButton
+                    id={this.props.id}/>
                 <br />
             </div>
         );
