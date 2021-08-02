@@ -9,7 +9,7 @@ class FavoritedBeersController < ApplicationController
 
   def create
     @favorited_beer = FavoritedBeer.create(favorited_beer_params)
-    render json: @favorited_beers, status: 200
+    render json: @favorited_beer, status: 200
 
   end
 
