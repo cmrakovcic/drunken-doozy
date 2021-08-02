@@ -25,5 +25,4 @@ class DeleteButton extends Component {
     }
 }
 
-// export default DeleteButton;
 export default connect (null, { deleteFavoritedBeer })(DeleteButton);

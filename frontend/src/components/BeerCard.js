@@ -22,7 +22,6 @@ class BeerCard extends Component {
                     name={this.props.name}
                     abv={this.props.abv}
                     ibu={this.props.ibu}
-                    // food_pairing={this.props.food_pairing.join(", ")}
                     food_pairing={this.props.food_pairing}
                     tagline={this.props.tagline}/>
                 <br />

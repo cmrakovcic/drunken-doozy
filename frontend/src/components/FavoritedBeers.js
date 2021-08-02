@@ -18,10 +18,4 @@ class FavoritedBeers extends Component {
     }
 };
 
-// const mapStateToProps = (state) => {
-//     return {
-//         favoritedBeers: state.favoritedBeers
-//     }
-// }
-
 export default FavoritedBeers;
