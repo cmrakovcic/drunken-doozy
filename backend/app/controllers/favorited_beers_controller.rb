@@ -19,7 +19,6 @@ class FavoritedBeersController < ApplicationController
   end
 
   def destroy
-    # binding.pry
     @favorited_beer.destroy
     render json: @favorited_beer, status: 200
   end
