@@ -17,7 +17,7 @@ const favoritedBeersReducer = (state = initialState, action) => {
         case "DELETE_FAVORITED_BEER": {
             return {
                 ...state,
-                favoritedBeers: [...state.favoritedBeers.filter(park => park.id !== action.payload.id)]
+                favoritedBeers: [...state.favoritedBeers.filter(beer => beer.id !== action.payload.id)]
             }}
         default: 
             return state
